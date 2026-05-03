@@ -1,7 +1,7 @@
 """Demo: cluster a synthetic dataset and save a side-by-side plot.
 
 Run from the repo root:
-    python src/demo.py
+    python demo.py
 
 Outputs ``kmeans_demo.png`` in the current directory.
 """

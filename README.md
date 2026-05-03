@@ -16,7 +16,7 @@ A small, readable implementation of **K-Means clustering** built only with NumPy
 
 ## Demo
 
-Running `src/demo.py` clusters 600 synthetic points into **4 groups** and saves a side-by-side plot:
+Running `demo.py` clusters 600 synthetic points into **4 groups** and saves a side-by-side plot:
 
 ![KMeans demo — before vs after clustering](./kmeans_demo.png)
 
@@ -31,12 +31,12 @@ cd k-means
 
 python3 -m venv .venv
 source .venv/bin/activate
-pip install numpy matplotlib scikit-learn
+pip install -r requirements.txt
 
-python src/demo.py        # generates kmeans_demo.png
+python demo.py            # generates kmeans_demo.png
 ```
 
-> `scikit-learn` is only used to generate the synthetic dataset (`make_blobs`). The clustering itself runs on the implementation in `src/kmeans.py`.
+> `scikit-learn` is only used to generate the synthetic dataset (`make_blobs`). The clustering itself runs on the implementation in `kmeans.py`.
 
 ## Usage
 
@@ -73,10 +73,10 @@ print(labels[:10])       # cluster index for each sample
 
 ```
 k-means/
-├── src/
-│   ├── kmeans.py     # KMeans class — core algorithm
-│   └── demo.py       # Synthetic-data demo that saves kmeans_demo.png
-├── kmeans_demo.png   # Output of demo.py (committed for the README)
+├── kmeans.py          # KMeans class — core algorithm
+├── demo.py            # Synthetic-data demo that saves kmeans_demo.png
+├── kmeans_demo.png    # Output of demo.py (committed for the README)
+├── requirements.txt
 └── README.md
 ```
 
